@@ -1,0 +1,5 @@
+{
+  "endpoint": "ecs.aliyuncs.com",
+  "accessKey": "<your-access-key>",
+  "secretKey": "<your-secret-key>"
+}
