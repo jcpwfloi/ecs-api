@@ -16,14 +16,10 @@ npm install
 
 ## Configuration
 
-```bash
-mv config.json.sample config.json
-```
-
 ## Usage
 
 ```javascript
-var ECS = require('@alicloud/ecs');
+var ECS = require('alicloud-ecs-api');
 var client = new ECS();
 
 client.request{
