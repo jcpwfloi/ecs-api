@@ -18,7 +18,7 @@ class ecs {
   }
 
   buildForm (data) {
-    this.form.Timestamp = dateformat(new Date(), 'yyyy-mm-dd', true) + 'T' + dateformat(new Date(), 'hh:MM:ss', true) + 'Z';
+    this.form.Timestamp = dateformat(new Date(), 'yyyy-mm-dd', true) + 'T' + dateformat(new Date(), 'HH:MM:ss', true) + 'Z';
 
     for (var key in data)
       this.form[key] = data[key];
@@ -35,7 +35,6 @@ class ecs {
 
   getSignature () {
     let query = 'GET&%2F&' + encodeURIComponent(querystring.stringify(this.form));
-    console.log(query);
 
     let hash = crypto.createHmac('sha1', this.config.secretKey + '&').update(query).digest('base64');
 
